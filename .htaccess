@@ -1,0 +1,12 @@
+ErrorDocument 403 /Newagence/view/error.php
+ErrorDocument 404 /Newagence/view/error.php
+ErrorDocument 405 /Newagence/view/error.php
+ErrorDocument 408 /Newagence/view/error.php
+ErrorDocument 500 /Newagence/view/error.php
+ErrorDocument 502 /Newagence/view/error.php
+ErrorDocument 504 /Newagence/view/error.php
+
+RewriteEngine On
+RewriteRule ^([^_]*)_([^_]*)\.html$ /Newagence/?p=$1&a=$2 [L]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)\.html$ /Newagence/?p=$1&a=$2&id=$3 [L]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)_([^_]*)_([^_]*)\.html$ /Newagence/?p=$1&a=$2&postid=$3&commentId=$4&vote=$5 [L]
